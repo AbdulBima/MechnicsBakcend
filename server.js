@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const orderRoute = require("./routes/orderRoute");
+const bookingRoute = require("./routes/bookingRoute");
 
 const errorMiddlware = require("./middleware/errorMIddleWare");
 const cors = require("cors");
@@ -22,6 +23,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/order", orderRoute);
+
+app.use("/api/booking", bookingRoute);
 
 app.use(errorMiddlware);
 mongoose

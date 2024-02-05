@@ -12,6 +12,11 @@ const orderSchema = mongoose.Schema(
 			required: [true, "please enter a correct name"],
 		},
 
+		amount: {
+			type: Number,
+			required: [true, "please enter a correct name"],
+		},
+
 		package: {
 			type: String,
 			required: [
